@@ -23,6 +23,7 @@ Partial Class formSales
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,11 +39,21 @@ Partial Class formSales
         Me.DataGridView1.Size = New System.Drawing.Size(1338, 481)
         Me.DataGridView1.TabIndex = 1
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1066, 105)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(284, 53)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'formSales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 28.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1362, 741)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -58,5 +69,6 @@ Partial Class formSales
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
     ' Friend WithEvents salesReportViewer As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
