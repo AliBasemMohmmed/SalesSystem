@@ -66,12 +66,8 @@
                 For Each dr As DataGridViewRow In FormCasher.DataGridView1.Rows
                     dt.Rows.Add(dr.Cells(0).Value, dr.Cells(1).Value, dr.Cells(2).Value, dr.Cells(3).Value, dr.Cells(4).Value, FormCasher.subtotalLbl.Text, FormCasher.cashtenderedLbl.Text, FormCasher.changeLbl.Text, FormCasher.discountLbl.Text, FormCasher.dateLbl.Text, FormCasher.cashierLbl.Text)
                 Next
-                '   Dim rptDoc As CrystalDecisions.CrystalReports.Engine.ReportDocument
-                '   rptDoc = New crystalReceipt
-                ' rptDoc.SetDataSource(dt)
-                ' formReceipt.receiptViewer.ReportSource = rptDoc
-                ' formReceipt.ShowDialog()
-                ' formReceipt.Dispose()
+                formReceipt.ShowDialog()
+                formReceipt.Dispose()
             End If
         End If
     End Sub

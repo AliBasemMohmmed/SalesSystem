@@ -1,4 +1,5 @@
-﻿Public Class formReceipt
+﻿Imports System.Data.SqlClient
+Public Class formReceipt
 
     Private Sub formReceipt_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         addTransaction()
@@ -27,6 +28,31 @@
     End Sub
 
     Private Sub formReceipt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Try
+            dbConnection()
+            sql = "SELECT Transaction_ID,Customer_name, Subtotal, Date, Time FROM sales_database"
+            cmd = New SqlCommand
+            With cmd
+                .Connection = conn
+                .CommandText = sql
+                .Parameters.Clear()
+                .ExecuteNonQuery()
+            End With
+            dt = New DataTable
+            da = New SqlDataAdapter
+            da.SelectCommand = cmd
+            da.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                MsgBox("No results!")
+            Else
+                MsgBox("Showing results!")
+            End If
+            DataGridView1.DataSource = dt
+        Catch ex As SqlException
+            MsgBox(ex.Message)
+        Finally
+            conn.Close()
+            cmd.Dispose()
+        End Try
     End Sub
 End Class

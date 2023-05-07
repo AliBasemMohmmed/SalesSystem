@@ -41,12 +41,14 @@ Partial Class formSales
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Button1.Location = New System.Drawing.Point(1066, 105)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(284, 53)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "clickin"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'formSales
         '

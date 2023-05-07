@@ -22,13 +22,28 @@ Partial Class formReceipt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(53, 147)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 26
+        Me.DataGridView1.Size = New System.Drawing.Size(1006, 481)
+        Me.DataGridView1.TabIndex = 2
         '
         'formReceipt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 28.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1119, 741)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
@@ -36,8 +51,11 @@ Partial Class formReceipt
         Me.MinimizeBox = False
         Me.Name = "formReceipt"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents DataGridView1 As DataGridView
     ' Friend WithEvents receiptViewer As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

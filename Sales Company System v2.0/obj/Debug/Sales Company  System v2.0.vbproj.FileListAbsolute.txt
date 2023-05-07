@@ -40,3 +40,4 @@ G:\Software Engineering project\Sales Company System v2.0.pdb
 G:\Software Engineering project\Sales Company System v2.0.xml
 G:\Software Engineering project\Ali+hayder+hamza.mdf
 G:\Software Engineering project\Ali+hayder+hamza_log.ldf
+G:\Software Engineering project\Sales Company System v2.0\obj\Debug\Sales Company  System v2.0.vbproj.CopyComplete
